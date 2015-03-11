@@ -46,7 +46,7 @@ public class MainActivity extends Activity implements GooglePlayServicesClient.C
 		
 		mIntentService = new Intent(this,LocationService.class);
 		mPendingIntent = PendingIntent.getService(this, 1, mIntentService, 0);
-		
+
 		int resp =GooglePlayServicesUtil.isGooglePlayServicesAvailable(this);
 		if(resp == ConnectionResult.SUCCESS){
 			mGoogleApiClient = new GoogleApiClient.Builder(MainActivity.this)
